@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><?= esc($title ?? 'Knihovna') ?> – KnihovnaApp</title>
+    <?= $this->include('Layout/links') ?>
     <?= $this->include('Layout/css') ?>
 </head>
-<body>
-    <?= $this->renderSection('Layout/navbar') ?>
 
-    <div class="container">
+<body>
+    <?= $this->include('Layout/navbar') ?>
+
+    <main>
         <?= $this->renderSection('content') ?>
-    </div>
-    
+    </main>
+
 </body>
+
 </html>
